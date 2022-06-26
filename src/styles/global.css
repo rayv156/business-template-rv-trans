@@ -1,0 +1,56 @@
+.opaque-background {
+    background-color: rgba(0, 0, 0, 0.7)
+}
+
+.company-logo {
+    width: 400px;
+}
+
+.title svg {
+        color: rgb(0,3,116);
+        margin-right: 1em;
+}
+
+form {
+    margin: 1em;
+    width: 50%;
+}
+
+hr {
+    width: 100%;
+    color: rgb(61,186,40);
+    border: solid;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100% !important;
+}
+
+.hero.is-medium .hero-body {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.section.is-medium {
+    padding: 1em;
+}
+
+@media only screen and (max-width: 615px){
+    .google-map {
+        width: 450px;
+      }
+    form {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .google-map {
+        width: 280px;
+      }
+}
