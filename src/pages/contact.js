@@ -10,7 +10,7 @@ import '../styles/global.css';
 const Contact = ({data}) => {
   const { businessInfo } = data.site.siteMetadata;
   const [disabled, setDisabled] = useState(true);
-  console.log(process.env.RECAPTCHA_SITE_KEY);
+  console.log(process.env.GATSBY_RECAPTCHA_SITE_KEY);
   return <>
       <Navbar businessInfo={businessInfo}/>
       <section className="section is-medium">
@@ -55,7 +55,7 @@ const Contact = ({data}) => {
   </div>
 </div>
 
-<ReCAPTCHA style={{marginBottom: '1rem'}} sitekey={process.env.RECAPTCHA_SITE_KEY} onChange={() => {setDisabled(false)}}/>
+<ReCAPTCHA style={{marginBottom: '1rem'}} sitekey={process.env.GATSBY_RECAPTCHA_SITE_KEY} onChange={() => {setDisabled(false)}}/>
 
 <div className="field is-grouped">
   <div className="control">
