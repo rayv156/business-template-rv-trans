@@ -9,7 +9,7 @@ import '../styles/global.css';
 
 const Contact = ({data}) => {
   const { businessInfo } = data.site.siteMetadata;
-  const [disabled, setDisabled] = useState(true); 
+  const [disabled, setDisabled] = useState(true);
   return <>
       <Navbar businessInfo={businessInfo}/>
       <section className="section is-medium">
