@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import 'bulma/css/bulma.min.css';
+import '../styles/global.css';
 import { graphql } from "gatsby";
 
 const About = ({data}) => {

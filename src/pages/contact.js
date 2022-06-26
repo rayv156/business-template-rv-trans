@@ -4,6 +4,8 @@ import Footer from '../components/Footer';
 import { graphql } from "gatsby";
 import { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
+import 'bulma/css/bulma.min.css';
+import '../styles/global.css';
 
 const Contact = ({data}) => {
   const { businessInfo } = data.site.siteMetadata;
