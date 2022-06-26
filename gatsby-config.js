@@ -30,7 +30,7 @@ module.exports = {
         ]
     }
   },
-  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-recaptcha", {
+  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-recaptcha", "gatsby-plugin-netlify", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",
