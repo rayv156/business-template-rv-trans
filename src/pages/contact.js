@@ -10,6 +10,7 @@ import '../styles/global.css';
 const Contact = ({data}) => {
   const { businessInfo } = data.site.siteMetadata;
   const [disabled, setDisabled] = useState(true);
+  console.log(process.env.RECAPTCHA_SITE_KEY);
   return <>
       <Navbar businessInfo={businessInfo}/>
       <section className="section is-medium">
