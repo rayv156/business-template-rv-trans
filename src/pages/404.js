@@ -56,7 +56,7 @@ const NotFoundPage = ({data}) => {
 }
 
 export const query = graphql`
-  query AboutPageQuery {
+  query ErrorPageQuery {
     site {
       siteMetadata {
         businessInfo {
