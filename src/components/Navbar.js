@@ -3,7 +3,7 @@ import companyLogo from '../../src/images/rv_trans_logo.png'
 const { useState } = React;
 
 function Navbar({businessInfo}) {
-  const {businessLogo, phoneNumber} = businessInfo;
+  const {phoneNumber} = businessInfo;
   const [isActive, setisActive] = useState(false);
   return <div>
     <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
