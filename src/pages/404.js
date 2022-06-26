@@ -1,6 +1,7 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import Navbar from "../components/Navbar"
+import * as React from "react";
+import { Link } from "gatsby";
+import Navbar from "../components/Navbar";
+import { graphql } from "gatsby";
 
 // styles
 const pageStyles = {
@@ -26,10 +27,11 @@ const codeStyles = {
 }
 
 // markup
-const NotFoundPage = () => {
+const NotFoundPage = ({data}) => {
+  const { businessInfo } = data.site.siteMetadata;
   return (
     <main style={pageStyles}>
-      <Navbar />
+      <Navbar businessInfo={businessInfo}/>
       <title>Not found</title>
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
@@ -52,5 +54,18 @@ const NotFoundPage = () => {
     </main>
   )
 }
+
+export const query = graphql`
+  query AboutPageQuery {
+    site {
+      siteMetadata {
+        businessInfo {
+          businessLogo
+          phoneNumber
+        }
+      }
+    }
+  }
+`
 
 export default NotFoundPage
