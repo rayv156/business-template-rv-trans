@@ -6,10 +6,13 @@ import { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import 'bulma/css/bulma.min.css';
 import '../styles/global.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = ({data}) => {
   const { businessInfo } = data.site.siteMetadata;
   const [disabled, setDisabled] = useState(true);
+  const [error, setError] = useState(false);
   console.log(process.env.GATSBY_RECAPTCHA_SITE_KEY);
   return <>
       <Navbar businessInfo={businessInfo}/>
@@ -55,11 +58,22 @@ const Contact = ({data}) => {
   </div>
 </div>
 
-<ReCAPTCHA style={{marginBottom: '1rem'}} sitekey={process.env.GATSBY_RECAPTCHA_SITE_KEY} onChange={() => {setDisabled(false)}}/>
-
+<ReCAPTCHA style={{marginBottom: '1rem'}} sitekey={process.env.GATSBY_RECAPTCHA_SITE_KEY} onChange={() => {setDisabled(false); setError(false)}}/>
+{ error ?
+  <div className="icon-text">
+    <span className="icon has-text-danger">
+    <FontAwesomeIcon icon={faCircleExclamation} size="sm" />
+    </span>
+    <span>There was an error in your submission.  Please make sure to check the checkbox above. </span>
+  </div>
+: null
+}
 <div className="field is-grouped">
   <div className="control">
-    <button type="submit" className="button is-link" disabled={disabled}>Submit</button>
+    {disabled 
+    ? <button type="button" className="button is-link" onClick={() => disabled ? setError(true) : null}>Submit</button>
+    : <button type="submit" className="button is-link" >Submit</button>
+    }
   </div>
   <div className="control">
     <button className="button is-link is-light">Cancel</button>
