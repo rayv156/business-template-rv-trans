@@ -10,12 +10,11 @@ import { graphql } from "gatsby";
 
 // markup
 const IndexPage = ({data}) => {
-  const { businessInfo } = data.site.siteMetadata;
-  return (
+  const { businessInfo, title, description } = data.site.siteMetadata;
+  return (<>
     <main >
-      <Navbar businessInfo={businessInfo}/>
+      <Navbar businessInfo={businessInfo} title={title} description={description}/>
       <Hero businessInfo={businessInfo}/>
-      <div className="columns">
       <div className="container">
       <section className="section">
         <h1 className="title">
@@ -37,7 +36,6 @@ const IndexPage = ({data}) => {
           100 freight broker credit score
           </h1>
       </section>
-      </div>
       </div>
         {/* {businessInfo.reviews.map((review, index)=> (
           
@@ -66,6 +64,7 @@ const IndexPage = ({data}) => {
 </div> */}
       <Footer />
     </main>
+    </>
   )
 }
 
@@ -73,6 +72,8 @@ export const query = graphql`
   query IndexPageQuery {
     site {
       siteMetadata {
+        title
+        description
         businessInfo {
           phoneNumber
           businessLogo

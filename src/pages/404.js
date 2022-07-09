@@ -28,10 +28,10 @@ const codeStyles = {
 
 // markup
 const NotFoundPage = ({data}) => {
-  const { businessInfo } = data.site.siteMetadata;
+  const { businessInfo, title, description } = data.site.siteMetadata;
   return (
     <main style={pageStyles}>
-      <Navbar businessInfo={businessInfo}/>
+      <Navbar businessInfo={businessInfo} title={title} description={description}/>
       <title>Not found</title>
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
@@ -59,6 +59,8 @@ export const query = graphql`
   query ErrorPageQuery {
     site {
       siteMetadata {
+        title
+        description
         businessInfo {
           businessLogo
           phoneNumber

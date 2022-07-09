@@ -1,22 +1,29 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import companyLogo from '../../src/images/rv_trans_logo.png'
 const { useState } = React;
 
-function Navbar({businessInfo}) {
+function Navbar({businessInfo, title, description}) {
   const {phoneNumber} = businessInfo;
   const [isActive, setisActive] = useState(false);
   return <div>
+    <Helmet>
+          <title>{title}</title>
+          <meta name="description" content={description} />
+        </Helmet>
     <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
   <div className="navbar-brand">
     <a className="navbar-item" href="/">
-      <img src={companyLogo} />
+      <img src={companyLogo} alt={`${businessInfo.name} Logo`}/>
     </a>
 
-    <a onClick={()=> {setisActive(!isActive)}} role="button" className={`navbar-burger burger ${isActive ? "is-active" : ""}`} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <button onClick={()=> {setisActive(!isActive)}} className={`navbar-burger burger ${isActive ? "is-active" : ""}`} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
-    </a>
+    </button>
   </div>
 
   <div id="navbarBasicExample" className={`navbar-menu ${isActive ? "is-active" : ""}`}>
@@ -38,7 +45,7 @@ function Navbar({businessInfo}) {
       </a>
 
       <a href={`tel:${phoneNumber}`} className="navbar-item">
-        Call Us Today {phoneNumber}
+      <FontAwesomeIcon icon={faPhone} style={{marginRight: '0.5em'}}/> Call Us Today {phoneNumber}
       </a>
 
     </div>

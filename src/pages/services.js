@@ -6,9 +6,9 @@ import 'bulma/css/bulma.min.css';
 import '../styles/global.css';
 
 const Services = ({data}) => {
-  const { businessInfo } = data.site.siteMetadata;
+  const { businessInfo, title, description } = data.site.siteMetadata;
   return <div>
-      <Navbar businessInfo={businessInfo}/>
+      <Navbar businessInfo={businessInfo} title={title} description={description}/>
       This is my services page
       <Footer />
       </div>;
@@ -18,6 +18,8 @@ export const query = graphql`
   query ServicesPageQuery {
     site {
       siteMetadata {
+        title
+        description
         businessInfo {
           businessLogo
           phoneNumber

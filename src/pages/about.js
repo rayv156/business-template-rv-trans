@@ -6,9 +6,9 @@ import '../styles/global.css';
 import { graphql } from "gatsby";
 
 const About = ({data}) => {
-    const { businessInfo } = data.site.siteMetadata;
+    const { businessInfo, title, description } = data.site.siteMetadata;
   return <div>
-      <Navbar businessInfo={businessInfo}/>
+      <Navbar businessInfo={businessInfo} title={title} description={description}/>
       <section className="section is-medium">
         <h1 className="title">About Us</h1>
         <h2 className="subtitle">
@@ -53,6 +53,8 @@ export const query = graphql`
   query AboutPageQuery {
     site {
       siteMetadata {
+        title
+        description
         businessInfo {
           businessLogo
           phoneNumber

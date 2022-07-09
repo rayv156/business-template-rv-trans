@@ -4,7 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `RV Trans - 956-237-2658`,
+    title: `RV Trans | 956-237-2658`,
+    description: "RV Trans, Import, Export, Broker, Transportation, Laredo,Texas, TX",
     siteUrl: `https://www.yourdomain.tld`,
     businessInfo: {
         phoneNumber: '956-237-2658',
@@ -30,7 +31,12 @@ module.exports = {
         ]
     }
   },
-  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-recaptcha", "gatsby-plugin-netlify", {
+  plugins: ["gatsby-plugin-netlify-cms", 
+  "gatsby-plugin-mdx", 
+  "gatsby-transformer-remark", 
+  "gatsby-plugin-recaptcha", 
+  "gatsby-plugin-netlify", 
+  "gatsby-plugin-react-helmet", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",

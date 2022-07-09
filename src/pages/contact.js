@@ -10,12 +10,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = ({data}) => {
-  const { businessInfo } = data.site.siteMetadata;
+  const { businessInfo, title, description } = data.site.siteMetadata;
   const [disabled, setDisabled] = useState(true);
   const [error, setError] = useState(false);
-  console.log(process.env.GATSBY_RECAPTCHA_SITE_KEY);
+  
   return <>
-      <Navbar businessInfo={businessInfo}/>
+      <Navbar businessInfo={businessInfo} title={title} description={description}/>
       <section className="section is-medium">
         <h1 className="title">Contact Us</h1>
         <h2 className="subtitle">
@@ -26,35 +26,30 @@ const Contact = ({data}) => {
 
 <form action="https://getform.io/f/b4b7d02d-ae85-4874-a216-0a5397f8b409" method="POST">
 <div className="field">
-  <label className="label">Name</label>
+  <label htmlFor="name-input" className="label">Name</label>
   <div className="control">
-    <input className="input" type="text" placeholder="Name" name="name"/>
+    <input className="input" type="text" placeholder="Name" name="name" id="name-input"/>
   </div>
 </div>
 
 <div className="field">
-  <label className="label">Email</label>
+  <label htmlFor="email-input" className="label">Email</label>
   <div className="control">
-    <input className="input" type="email" placeholder="Email" name="email"/>
+    <input className="input" type="email" placeholder="Email" name="email" id="email-input"/>
   </div>
 </div>
 
-{/* <div className="field">
-  <label className="label">Subject</label>
+<div className="field">
+  <label htmlFor="phone-input" className="label">Phone Number</label>
   <div className="control">
-    <div className="select">
-      <select name="dropdown">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </select>
-    </div>
+    <input className="input" type="tel" placeholder="Phone #" name="phone" id="phone-input"/>
   </div>
-</div> */}
+</div>
 
 <div className="field">
-  <label className="label">Message</label>
+  <label htmlFor="message-input" className="label">Message</label>
   <div className="control">
-    <textarea className="textarea" placeholder="Ex:  I'm looking for a quote please call me back at ..." name="message"></textarea>
+    <textarea className="textarea" id="message-input" placeholder="Ex:  I'm looking for a quote please call me back at ..." name="message"></textarea>
   </div>
 </div>
 
@@ -81,7 +76,7 @@ const Contact = ({data}) => {
 </div>
 </form>
 
-<iframe className="google-map" src={businessInfo.googleAddress} width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
+<iframe className="google-map" title="google map for RV Trans" src={businessInfo.googleAddress} width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
 
 {/* <table className="table">
   <thead>
@@ -131,6 +126,8 @@ export const query = graphql`
   query ContactPageQuery {
     site {
       siteMetadata {
+        title
+        description
         businessInfo {
           businessLogo
           phoneNumber
