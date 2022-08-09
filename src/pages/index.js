@@ -19,49 +19,24 @@ const IndexPage = ({data}) => {
       <section className="section">
         <h1 className="title">
           <FontAwesomeIcon icon={faPeopleArrowsLeftRight} size="lg" />
-          Personalized services
+          <div>Personalized services</div>
           </h1>
       </section>
       <hr></hr>
       <section className="section">
         <h1 className="title">
         <FontAwesomeIcon icon={faBusinessTime} size="lg" />
-          Over 35 years of experience
+          <div>Over 35 years of experience</div>
           </h1>
       </section>
       <hr></hr>
       <section className="section">
         <h1 className="title">
         <FontAwesomeIcon icon={faCircleCheck} size="lg" />
-          100 freight broker credit score
+          <div>100 freight broker credit score</div>
           </h1>
       </section>
       </div>
-        {/* {businessInfo.reviews.map((review, index)=> (
-          
-          <div className="card" key={index}>
-  <div className="card-content">
-    <p className="title">
-      {review.message}
-    </p> 
-    <p className="subtitle">
-      {review.name}/{review.title}
-        </p>
-  <footer className="card-footer">
-    <p className="card-footer-item">
-      <span>
-        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-      </span>
-    </p>
-    <p className="card-footer-item">
-      <span>
-        Share on <a href="#">Facebook</a>
-      </span>
-    </p>
-  </footer>
-</div>
-          ))}
-</div> */}
       <Footer />
     </main>
     </>

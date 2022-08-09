@@ -13,7 +13,7 @@ const Contact = ({data}) => {
   const { businessInfo, title, description } = data.site.siteMetadata;
   const [disabled, setDisabled] = useState(true);
   const [error, setError] = useState(false);
-  
+
   return <>
       <Navbar businessInfo={businessInfo} title={title} description={description}/>
       <section className="section is-medium">
@@ -76,47 +76,8 @@ const Contact = ({data}) => {
 </div>
 </form>
 
-<iframe className="google-map" title="google map for RV Trans" src={businessInfo.googleAddress} width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
+{/* <iframe className="google-map" title="google map for RV Trans" src={businessInfo.googleAddress} width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy"></iframe> */}
 
-{/* <table className="table">
-  <thead>
-    <tr>
-      <th>Hours</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Monday</th>
-      <td>08:00 AM - 6:00 PM
-      </td>
-    </tr>
-    <tr>
-      <th>Tuesday</th>
-      <td>08:00 AM - 6:00 PM</td>
-    </tr>
-    <tr>
-      <th>Wednesday</th>
-      <td>08:00 AM - 6:00 PM</td>
-    </tr>
-    <tr>
-      <th>Thursday</th>
-      <td>08:00 AM - 6:00 PM</td>
-    </tr>
-    <tr>
-      <th>Friday</th>
-      <td>08:00 AM - 6:00 PM</td>
-    </tr>
-    <tr>
-      <th>Saturday</th>
-      <td>08:00 AM - 6:00 PM</td>
-    </tr>
-    <tr>
-      <th>Sunday</th>
-      <td>12:00 PM - 6:00 PM</td>
-    </tr>
-  </tbody>
-</table> */}
 </div>
 <Footer />
 </>;

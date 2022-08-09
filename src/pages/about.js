@@ -12,39 +12,25 @@ const About = ({data}) => {
       <section className="section is-medium">
         <h1 className="title">About Us</h1>
         <h2 className="subtitle">
-            A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
+        Name:  RV Trans
+        1816 Orange Blossom Loop
+        Laredo, TX 78045
+        <br></br>
+        Phone:  956-237-2658
+        <br></br>
+        Email:  roy@rvtrans.us
+        <br></br>
+        Established: 2018
+        <br></br>
+        MC#  125298
+        <br></br>
+        USDOT# 3179700
+        <br></br>
+        Website  www.rvtrans.us
+        <br></br>
+        Banking  Texas Community Bank – Oscar Pena
         </h2>
 </section>
-        <div className="card">
-            <div className="card-content">
-                <p className="title">
-                    “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
-                </p>
-                <p className="subtitle">
-                    Jeff Atwood
-                </p>
-            </div>
-        </div>
-        <div className="card">
-            <div className="card-content">
-            <p className="title">
-                    “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
-                </p>
-                <p className="subtitle">
-                    Jeff Atwood
-                </p>
-            </div>
-        </div>
-        <div className="card">
-            <div className="card-content">
-            <p className="title">
-                    “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
-                </p>
-                <p className="subtitle">
-                    Jeff Atwood
-                </p>
-            </div>
-        </div>
         <Footer />
       </div>;
 };

@@ -36,9 +36,9 @@ function Navbar({businessInfo, title, description}) {
         About
       </a>
 
-      <a href="/services" className="navbar-item">
+      {/* <a href="/services" className="navbar-item">
         Services
-      </a>
+      </a> */}
 
       <a href="/contact" className="navbar-item">
         Contact Us

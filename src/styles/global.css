@@ -40,6 +40,10 @@ hr {
     padding: 1em;
 }
 
+.title {
+    display: flex;
+}
+
 @media only screen and (max-width: 615px){
     .google-map {
         width: 450px;
