@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `RV Trans | 956-237-2658`,
+    title: `RV Trans`,
     description: "RV Trans, Import, Export, Broker, Transportation, Laredo,Texas, TX",
     siteUrl: `https://www.yourdomain.tld`,
     businessInfo: {

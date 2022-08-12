@@ -3,6 +3,10 @@ import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import companyLogo from '../../src/images/rv_trans_logo.png'
+import appleTouch from '../../src/images/apple-touch-icon.png'
+import favicon32 from '../../src/images/favicon-32x32.png'
+import favicon16 from '../../src/images/favicon-16x16.png'
+
 const { useState } = React;
 
 function Navbar({businessInfo, title, description}) {
@@ -12,6 +16,9 @@ function Navbar({businessInfo, title, description}) {
     <Helmet>
           <title>{title}</title>
           <meta name="description" content={description} />
+          <link rel="apple-touch-icon" sizes="180x180" href={appleTouch} />
+          <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+          <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
         </Helmet>
     <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
   <div className="navbar-brand">

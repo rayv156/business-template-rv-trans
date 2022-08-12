@@ -55,6 +55,11 @@ const IndexPage = ({data}) => {
           <p style={{textAlign: 'right'}}>MAG INTERNATIONAL TRANSPORT LLC</p>
           <p style={{textAlign: 'right'}}>Terminal Manager</p>
         </article>
+        <article className="tile is-child box">
+          <p>"For the past 3 years we have been working with RV TRANS without any incidents or issues. The Customer Service is excellent. The loads are fairly priced and always paid on time. Their dispatching hours are 24/7, always kind and approachable which in this kind of Industry is definitely a plus."</p>
+          <p style={{textAlign: 'right'}}>-Esther Oviedo</p>
+          <p style={{textAlign: 'right'}}>Imperio Transport, Inc.</p>
+        </article>
       </div>
      
     </div>
