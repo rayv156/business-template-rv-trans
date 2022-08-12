@@ -1,11 +1,11 @@
 import React from 'react';
+import 'bulma/css/bulma.min.css';
+import '../styles/global.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { graphql } from "gatsby";
 import { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
-import 'bulma/css/bulma.min.css';
-import '../styles/global.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 

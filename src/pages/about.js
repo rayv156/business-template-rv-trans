@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import 'bulma/css/bulma.min.css';
 import '../styles/global.css';
-import { graphql } from "gatsby";
+import Footer from '../components/Footer';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Navbar from '../components/Navbar';
+import { graphql } from "gatsby";
 import { faEnvelope, faPhone, faPaperPlane, faHouse } from '@fortawesome/free-solid-svg-icons'
 import companyLogo from '../../src/images/rv_trans_logo.png'
 
