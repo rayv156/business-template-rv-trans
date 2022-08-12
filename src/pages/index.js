@@ -1,4 +1,7 @@
 import * as React from "react"
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false; /* eslint-disable import/first */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
