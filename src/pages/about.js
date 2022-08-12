@@ -5,7 +5,7 @@ import 'bulma/css/bulma.min.css';
 import '../styles/global.css';
 import { graphql } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faPaperPlane, faGlobe, faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhone, faPaperPlane, faHouse } from '@fortawesome/free-solid-svg-icons'
 import companyLogo from '../../src/images/rv_trans_logo.png'
 
 const About = ({data}) => {
@@ -19,7 +19,7 @@ const About = ({data}) => {
     <div className="media">
       <div className="media-left">
         <figure className="image is-48x48">
-          <img src={companyLogo} alt="Placeholder image" />
+          <img src={companyLogo} alt="RV Trans Logo" />
         </figure>
       </div>
       <div className="media-content">

@@ -19,6 +19,7 @@ function Navbar({businessInfo, title, description}) {
           <link rel="apple-touch-icon" sizes="180x180" href={appleTouch} />
           <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
           <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
+          <link href="../../src/styles/initial.css" rel="stylesheet" />
         </Helmet>
     <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
   <div className="navbar-brand">

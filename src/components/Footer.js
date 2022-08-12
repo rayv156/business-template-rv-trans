@@ -80,7 +80,7 @@ const Footer = () => {
     </div>
     </div>
     <div className="content has-text-centered">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" style={{marginRight: '1rem', width: '40px'}}></img>
+    <img alt="American Flag" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" style={{marginRight: '1rem', width: '40px'}}></img>
     <FontAwesomeIcon icon={faRibbon} style={{fontSize: "30px" ,color: 'hotpink'}} size="lg"/>
     </div>
     <div className="content has-text-centered">
