@@ -11,6 +11,10 @@
         margin-right: 1em;
 }
 
+.tile.is-ancestor {
+    width: 100%;
+}
+
 form {
     margin: 1em;
     width: 50%;

@@ -1,6 +1,9 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import 'bulma/css/bulma.min.css';
+import '../styles/global.css';
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { graphql } from "gatsby";
 
 // styles
@@ -32,25 +35,11 @@ const NotFoundPage = ({data}) => {
   return (
     <main style={pageStyles}>
       <Navbar businessInfo={businessInfo} title={title} description={description}/>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
+      <div className="content">
+        <h1>Page Not Found</h1>
+        <p>Please try any of the links below.</p>
+      </div>
+      <Footer></Footer>
     </main>
   )
 }

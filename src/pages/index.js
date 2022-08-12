@@ -16,26 +16,53 @@ const IndexPage = ({data}) => {
       <Navbar businessInfo={businessInfo} title={title} description={description}/>
       <Hero businessInfo={businessInfo}/>
       <div className="container">
-      <section className="section">
-        <h1 className="title">
+      <div className="tile is-ancestor">
+      <div className="tile is-parent">
+    <article className="tile is-child box">
+      <div className="content">
+        <p className="title">What we offer</p>
+        <p className="subtitle">
+       
+        <h1 className="title is-size-4">
           <FontAwesomeIcon icon={faPeopleArrowsLeftRight} size="lg" />
           <div>Personalized services</div>
           </h1>
-      </section>
+      
       <hr></hr>
-      <section className="section">
-        <h1 className="title">
+        <h1 className="title is-size-4">
         <FontAwesomeIcon icon={faBusinessTime} size="lg" />
           <div>Over 35 years of experience</div>
           </h1>
-      </section>
+      
       <hr></hr>
-      <section className="section">
-        <h1 className="title">
+      
+        <h1 className="title is-size-4">
         <FontAwesomeIcon icon={faCircleCheck} size="lg" />
           <div>100 freight broker credit score</div>
           </h1>
-      </section>
+      
+        </p>
+      </div>
+    </article>
+  </div>
+  <div className="tile is-vertical is-6">
+    <div className="tile">
+      <div className="tile is-parent is-vertical">
+        <article className="tile is-child box">
+        <p className="title">Testimonials</p>
+          <p>"Working with RV TRANS these past 2 years and still going has been a pleasure to work with, and the relationship that MAG INTERNATIONAL TRANSPORT LLC has proven growth to our company. RV has great customer service, great leadership, but above all they pay their freight bills on time as to why they have a 100 credit score on DAT load board, that is why moving freight for them is always welcomed.  Thank you Mr. Roy Velasquez for being a valued customer."</p>
+          <p style={{textAlign: 'right'}}>-Javier Morales Jr</p>
+          <p style={{textAlign: 'right'}}>MAG INTERNATIONAL TRANSPORT LLC</p>
+          <p style={{textAlign: 'right'}}>Terminal Manager</p>
+        </article>
+      </div>
+     
+    </div>
+    
+  </div>
+  
+</div>
+      
       </div>
       <Footer />
     </main>
