@@ -2,6 +2,7 @@ import * as React from "react"
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import '../styles/initial.css';
 import 'bulma/css/bulma.min.css';
 import '../styles/global.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
