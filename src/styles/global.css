@@ -48,6 +48,29 @@ hr {
     display: flex;
 }
 
+.submit-button {
+    background-color: rgba(0,3,116, 0.8) !important;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url(../images/trucking-image.jpg);
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.tile.is-child.box {
+    background-color: rgba(256, 256, 256, 0.9);
+}
+
 @media only screen and (max-width: 615px){
     .google-map {
         width: 450px;

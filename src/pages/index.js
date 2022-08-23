@@ -13,7 +13,7 @@ import { graphql } from "gatsby";
 const IndexPage = ({data}) => {
   const { businessInfo, title, description } = data.site.siteMetadata;
   return (<>
-    <main >
+    <main className="parallax">
       <Navbar businessInfo={businessInfo} title={title} description={description}/>
       <Hero businessInfo={businessInfo}/>
       <div className="container">
@@ -22,7 +22,7 @@ const IndexPage = ({data}) => {
     <article className="tile is-child box">
       <div className="content">
         <p className="title">What we offer</p>
-        <p className="subtitle">
+        <div className="subtitle">
        
         <h1 className="title is-size-4">
           <FontAwesomeIcon icon={faPeopleArrowsLeftRight} size="lg" />
@@ -42,7 +42,7 @@ const IndexPage = ({data}) => {
           <div>100 freight broker credit score</div>
           </h1>
       
-        </p>
+        </div>
       </div>
     </article>
   </div>

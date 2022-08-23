@@ -66,12 +66,9 @@ const Contact = ({data}) => {
 <div className="field is-grouped">
   <div className="control">
     {disabled 
-    ? <button type="button" className="button is-link" onClick={() => disabled ? setError(true) : null}>Submit</button>
-    : <button type="submit" className="button is-link" >Submit</button>
+    ? <button type="button" className="button is-link submit-button" onClick={() => disabled ? setError(true) : null}>Submit</button>
+    : <button type="submit" className="button is-link submit-button">Submit</button>
     }
-  </div>
-  <div className="control">
-    <button className="button is-link is-light">Cancel</button>
   </div>
 </div>
 </form>
