@@ -57,11 +57,11 @@ hr {
     background-image: url(../images/trucking-image.jpg);
 
     /* Set a specific height */
-    min-height: 500px;
+    min-height: 300px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
