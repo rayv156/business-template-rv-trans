@@ -6,22 +6,26 @@ module.exports = {
   siteMetadata: {
     title: `RV Trans`,
     description: "RV Trans, Import, Export, Broker, Transportation, Laredo,Texas, TX",
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `rvtrans.us`,
     businessInfo: {
         phoneNumber: '956-237-2658',
         businessLogo: '',
+        address: '1816 Orange Blossom Loop Laredo, TX 78045',
         googleAddress: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.7612047994567!2d-99.4651802845195!3d27.600932082836085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866120a9e7382d09%3A0xf317e661025f05d2!2s1816%20Orange%20Blossom%20Loop%2C%20Laredo%2C%20TX%2078045!5e0!3m2!1sen!2sus!4v1655682816600!5m2!1sen!2sus',
         name: 'RV Trans',
+        email: 'roy@rvtrans.us',
         reviews: [
           {
-            name: 'Matt B',
-            message: "As long as they've handled my freight deliveries, my shipments have been picked up and delivered on time without any issue. I recommend you trust the company I'm now proud to call my permanent logistics provider.",
-            title: 'Customer'
+            name: 'Javier Morales Jr',
+            message: "Working with RV TRANS these past 2 years and still going has been a pleasure to work with, and the relationship that MAG INTERNATIONAL TRANSPORT LLC has proven growth to our company. RV has great customer service, great leadership, but above all they pay their freight bills on time as to why they have a 100 credit score on DAT load board, that is why moving freight for them is always welcomed. Thank you Mr. Roy Velasquez for being a valued customer.",
+            title: 'Terminal Manager',
+            company: 'MAG INTERNATIONAL TRANSPORT LLC'
           },
           {
-            name: 'Neo S',
-            message: "HUA FREIGHT has easy-to-use software that makes the on-boarding process simple. Uploading documentation and insurance documents was a breeze. Their factoring company was collaborative and received payment in less than 48 hours.",
-            title: 'Carrier'
+            name: 'Esther Oviedo',
+            message: "For the past 3 years we have been working with RV TRANS without any incidents or issues. The Customer Service is excellent. The loads are fairly priced and always paid on time. Their dispatching hours are 24/7, always kind and approachable which in this kind of Industry is definitely a plus.",
+            title: null,
+            company: 'Imperio Transport, Inc.'
           },
           {
             name: 'Lisa E',

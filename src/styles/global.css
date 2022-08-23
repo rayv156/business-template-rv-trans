@@ -1,5 +1,5 @@
 .opaque-background {
-    background-color: rgba(0, 0, 0, 0.7)
+    /* background-color: rgba(0, 0, 0, 0.7) */
 }
 
 .company-logo {
@@ -30,14 +30,34 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
     width: 100%;
     max-width: 100% !important;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url(../images/trucking_rain.jpg);
+    
+    /* Set a specific height */
+    min-height: 500px;
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.card {
+    background-color: rgba(256,256,256, 0.9);
+    width: 350px;
 }
 
 .hero.is-medium .hero-body {
     padding: 1em;
     display: flex;
-    justify-content: center;
 }
 
 .section.is-medium {
@@ -46,6 +66,10 @@ hr {
 
 .title {
     display: flex;
+}
+
+.right-align-text {
+    text-align: right;
 }
 
 @media only screen and (max-width: 615px){

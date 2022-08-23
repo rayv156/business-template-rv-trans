@@ -9,7 +9,7 @@ import { faEnvelope, faPhone, faPaperPlane, faHouse } from '@fortawesome/free-so
 import companyLogo from '../../src/images/rv_trans_logo.png'
 
 const About = ({data}) => {
-    const { businessInfo, title, description } = data.site.siteMetadata;
+    const { businessInfo, title, description, siteUrl } = data.site.siteMetadata;
   return <div>
       <Navbar businessInfo={businessInfo} title={title} description={description}/>
       <section className="section is-medium">
@@ -23,14 +23,13 @@ const About = ({data}) => {
         </figure>
       </div>
       <div className="media-content">
-        <p className="title is-4">RV Trans</p>
+        <p className="title is-4">{businessInfo.name}</p>
       </div>
     </div>
 
     <div className="content">
       <FontAwesomeIcon icon={faPaperPlane} size="lg" style={{marginRight: '1rem', color: 'rgb(0,3,116)'}}/>
-      1816 Orange Blossom Loop
-        Laredo, TX 78045
+      {businessInfo.address}
         
     </div>
     <div className="content">
@@ -41,13 +40,13 @@ const About = ({data}) => {
     <div className="content">
       <a href="mailto: roy@rvtrans.us">
       <FontAwesomeIcon icon={faEnvelope} size="lg" style={{marginRight: '1rem', color: 'rgb(0,3,116)'}}/>
-      roy@rvtrans.us
+      {businessInfo.email}
       </a>
     </div>
     <div className="content">
       <a href="/">
     <FontAwesomeIcon icon={faHouse} size="lg" style={{marginRight: '1rem', color: 'rgb(0,3,116)'}}/>
-    www.rvtrans.us
+    {siteUrl}
     </a>
     </div>
     <div className="content">
@@ -75,9 +74,13 @@ export const query = graphql`
       siteMetadata {
         title
         description
+        siteUrl
         businessInfo {
           businessLogo
           phoneNumber
+          address
+          email
+          name
         }
       }
     }
