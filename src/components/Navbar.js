@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faRibbon } from '@fortawesome/free-solid-svg-icons';
 import companyLogo from '../../src/images/rv_trans_logo.png'
 import appleTouch from '../../src/images/apple-touch-icon.png'
 import favicon32 from '../../src/images/favicon-32x32.png'
@@ -55,6 +55,9 @@ function Navbar({businessInfo, title, description}) {
       <FontAwesomeIcon icon={faPhone} style={{marginRight: '0.5em'}}/> Call Us Today {phoneNumber}
       </a>
 
+    </div>
+    <div className="navbar-end" style={{alignItems: 'center'}}>
+    <FontAwesomeIcon icon={faRibbon} style={{fontSize: "30px" ,color: 'white'}} size="lg"/>
     </div>
 
   </div>
