@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 import chrisImage from '../../src/images/IMG_1041.png'
-import { faPeopleArrowsLeftRight, faBusinessTime, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
+import { faPeopleArrowsLeftRight, faBusinessTime, faCircleCheck, faRibbon } from '@fortawesome/free-solid-svg-icons'
 import { graphql } from "gatsby";
 
 // markup
@@ -21,7 +21,8 @@ const IndexPage = ({data}) => {
         <div className="tile is-child box">
           <div className="content" style={{textAlign: 'center'}}>
           <p className="title">Honoring Breast Cancer Survivors</p>
-        <img src={chrisImage} alt="cancer survivor image" style={{width: '300px'}}/>
+        <img src={chrisImage} alt="cancer survivor image" style={{width: '300px', zIndex: '3'}}/>
+        <FontAwesomeIcon icon={faRibbon} style={{fontSize: "125px" ,color: 'rgb(240, 0, 186)', position: 'absolute', margin: '0 0 0 -80px'}} size="lg"/>
         </div>
         </div>
       <div className="tile is-ancestor">
