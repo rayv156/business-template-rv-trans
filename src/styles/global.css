@@ -3,7 +3,7 @@
 }
 
 .navbar.is-dark {
-    background-color: hotpink;
+    background-color: rgb(240, 0, 186);
 }
 
 .company-logo {
@@ -68,6 +68,7 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 0;
 
 }
 
