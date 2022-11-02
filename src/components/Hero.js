@@ -1,5 +1,5 @@
 import React from 'react';
-import companyLogo from '../../src/images/pink_logo.png'
+import companyLogo from '../../src/images/rv_trans_logo.png'
 
 const Hero = () => {
   return <div>

@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
-import chrisImage from '../../src/images/IMG_1041.png'
-import { faPeopleArrowsLeftRight, faBusinessTime, faCircleCheck, faRibbon } from '@fortawesome/free-solid-svg-icons'
+// import chrisImage from '../../src/images/IMG_1041.png'
+import { faPeopleArrowsLeftRight, faBusinessTime, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { graphql } from "gatsby";
 
 // markup
@@ -18,13 +18,13 @@ const IndexPage = ({data}) => {
       <Navbar businessInfo={businessInfo} title={title} description={description}/>
       <Hero businessInfo={businessInfo}/>
       <div className="container" style={{gap: '1rem'}}>
-        <div className="tile is-child box">
+        {/* <div className="tile is-child box">
           <div className="content" style={{textAlign: 'center'}}>
           <p className="title">Honoring Breast Cancer Survivors</p>
         <img src={chrisImage} alt="cancer survivor image" style={{width: '300px', zIndex: '3'}}/>
         <FontAwesomeIcon icon={faRibbon} style={{fontSize: "125px" ,color: 'rgb(240, 0, 186)', position: 'absolute', margin: '0 0 0 -80px'}} size="lg"/>
         </div>
-        </div>
+        </div> */}
       <div className="tile is-ancestor">
       <div className="tile is-parent">
     <article className="tile is-child box">
