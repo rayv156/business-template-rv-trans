@@ -2,6 +2,7 @@ import React from 'react';
 import 'bulma/css/bulma.min.css';
 import '../styles/global.css';
 import Navbar from '../components/Navbar';
+import Seo from '../components/Seo';
 import Footer from '../components/Footer';
 import { graphql } from "gatsby";
 import { useState } from 'react';
@@ -10,12 +11,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = ({data}) => {
-  const { businessInfo, title, description } = data.site.siteMetadata;
+  const { businessInfo } = data.site.siteMetadata;
   const [disabled, setDisabled] = useState(true);
   const [error, setError] = useState(false);
 
   return <>
-      <Navbar businessInfo={businessInfo} title={title} description={description}/>
+      <Navbar businessInfo={businessInfo}/>
       <section className="section is-medium">
         <h1 className="title">Contact Us</h1>
         <h2 className="subtitle">
@@ -95,5 +96,10 @@ export const query = graphql`
     }
   }
 `
+
+export function Head({ data }) {
+  const { title, description } = data.site.siteMetadata;
+  return <Seo title={title} description={description} />;
+}
 
 export default Contact;

@@ -6,16 +6,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
+import Seo from '../components/Seo'
 // import chrisImage from '../../src/images/IMG_1041.png'
 import { faPeopleArrowsLeftRight, faBusinessTime, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { graphql } from "gatsby";
 
 // markup
 const IndexPage = ({data}) => {
-  const { businessInfo, title, description } = data.site.siteMetadata;
+  const { businessInfo } = data.site.siteMetadata;
   return (<>
     <main className="parallax">
-      <Navbar businessInfo={businessInfo} title={title} description={description}/>
+      <Navbar businessInfo={businessInfo}/>
       <Hero businessInfo={businessInfo}/>
       <div className="container" style={{gap: '1rem'}}>
         {/* <div className="tile is-child box">
@@ -104,5 +105,10 @@ export const query = graphql`
     }
   }
 `
+
+export function Head({ data }) {
+  const { title, description } = data.site.siteMetadata;
+  return <Seo title={title} description={description} />;
+}
 
 export default IndexPage

@@ -31,12 +31,17 @@ module.exports = {
         ]
     }
   },
-  plugins: ["gatsby-plugin-netlify-cms", 
-  "gatsby-plugin-mdx", 
-  "gatsby-transformer-remark", 
-  "gatsby-plugin-recaptcha", 
-  "gatsby-plugin-netlify", 
-  "gatsby-plugin-react-helmet", {
+  plugins: [
+  {
+    resolve: 'gatsby-plugin-netlify-cms',
+    options: {
+      modulePath: require.resolve('decap-cms-app'),
+    },
+  },
+  "gatsby-plugin-mdx",
+  "gatsby-transformer-remark",
+  "gatsby-plugin-netlify",
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",

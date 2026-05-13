@@ -2,15 +2,16 @@ import * as React from "react";
 import 'bulma/css/bulma.min.css';
 import '../styles/global.css';
 import Navbar from "../components/Navbar";
+import Seo from "../components/Seo";
 import Footer from "../components/Footer";
 import { graphql } from "gatsby";
 
 
 // markup
 const NotFoundPage = ({data}) => {
-  const { businessInfo, title, description } = data.site.siteMetadata;
+  const { businessInfo } = data.site.siteMetadata;
   return (<div>
-      <Navbar businessInfo={businessInfo} title={title} description={description}/>
+      <Navbar businessInfo={businessInfo}/>
       <div className="content">
         <h1>Page Not Found</h1>
         <p>Please try any of the links below.</p>
@@ -34,5 +35,10 @@ export const query = graphql`
     }
   }
 `
+
+export function Head({ data }) {
+  const { title, description } = data.site.siteMetadata;
+  return <Seo title={title} description={description} />;
+}
 
 export default NotFoundPage
