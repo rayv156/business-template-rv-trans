@@ -3,6 +3,7 @@ import 'bulma/css/bulma.min.css';
 import '../styles/global.css';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Seo from "../components/Seo";
 import { graphql } from "gatsby";
 
 
@@ -18,6 +19,11 @@ const NotFoundPage = ({data}) => {
       <Footer></Footer>
     </div>
   )
+}
+
+export function Head({ data }) {
+  const { title, description } = data.site.siteMetadata;
+  return <Seo title={`${title} — Page Not Found`} description={description} />;
 }
 
 export const query = graphql`

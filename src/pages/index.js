@@ -6,7 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
-// import chrisImage from '../../src/images/IMG_1041.png'
+import Seo from '../components/Seo'
+// import chrisImage from '../images/IMG_1041.png'
 import { faPeopleArrowsLeftRight, faBusinessTime, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { graphql } from "gatsby";
 
@@ -31,25 +32,25 @@ const IndexPage = ({data}) => {
       <div className="content">
         <p className="title">What we offer</p>
         <div className="subtitle">
-       
+
         <h1 className="title is-size-4">
           <FontAwesomeIcon icon={faPeopleArrowsLeftRight} size="lg" />
           <div>Personalized services</div>
           </h1>
-      
+
       <hr></hr>
         <h1 className="title is-size-4">
         <FontAwesomeIcon icon={faBusinessTime} size="lg" />
           <div>Over 35 years of experience</div>
           </h1>
-      
+
       <hr></hr>
-      
+
         <h1 className="title is-size-4">
         <FontAwesomeIcon icon={faCircleCheck} size="lg" />
           <div>100 freight broker credit score</div>
           </h1>
-      
+
         </div>
       </div>
     </article>
@@ -70,18 +71,23 @@ const IndexPage = ({data}) => {
           <p style={{textAlign: 'right'}}>Imperio Transport, Inc.</p>
         </article>
       </div>
-     
+
     </div>
-    
+
   </div>
-  
+
 </div>
-      
+
       </div>
       <Footer />
     </main>
     </>
   )
+}
+
+export function Head({ data }) {
+  const { title, description } = data.site.siteMetadata;
+  return <Seo title={title} description={description} />;
 }
 
 export const query = graphql`

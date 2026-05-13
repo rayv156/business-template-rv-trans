@@ -4,9 +4,10 @@ import '../styles/global.css';
 import Footer from '../components/Footer';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from '../components/Navbar';
+import Seo from '../components/Seo';
 import { graphql } from "gatsby";
 import { faEnvelope, faPhone, faPaperPlane, faHouse } from '@fortawesome/free-solid-svg-icons'
-import companyLogo from '../../src/images/rv_trans_logo.png'
+import companyLogo from '../images/rv_trans_logo.png'
 
 const About = ({data}) => {
     const { businessInfo, title, description } = data.site.siteMetadata;
@@ -31,7 +32,7 @@ const About = ({data}) => {
       <FontAwesomeIcon icon={faPaperPlane} size="lg" style={{marginRight: '1rem', color: 'rgb(0,3,116)'}}/>
       1816 Orange Blossom Loop
         Laredo, TX 78045
-        
+
     </div>
     <div className="content">
       <a href={`tel:${businessInfo.phoneNumber}`}><FontAwesomeIcon icon={faPhone} size="lg" style={{marginRight: '1rem', color: 'rgb(0,3,116)'}}/>
@@ -68,6 +69,11 @@ const About = ({data}) => {
         <Footer />
       </div>;
 };
+
+export function Head({ data }) {
+  const { title, description } = data.site.siteMetadata;
+  return <Seo title={title} description={description} />;
+}
 
 export const query = graphql`
   query AboutPageQuery {

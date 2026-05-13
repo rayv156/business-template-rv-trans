@@ -3,6 +3,7 @@ import 'bulma/css/bulma.min.css';
 import '../styles/global.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Seo from '../components/Seo';
 import { graphql } from "gatsby";
 import { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -65,7 +66,7 @@ const Contact = ({data}) => {
 }
 <div className="field is-grouped">
   <div className="control">
-    {disabled 
+    {disabled
     ? <button type="button" className="button is-link submit-button" onClick={() => disabled ? setError(true) : null}>Submit</button>
     : <button type="submit" className="button is-link submit-button">Submit</button>
     }
@@ -79,6 +80,11 @@ const Contact = ({data}) => {
 <Footer />
 </>;
 };
+
+export function Head({ data }) {
+  const { title, description } = data.site.siteMetadata;
+  return <Seo title={title} description={description} />;
+}
 
 export const query = graphql`
   query ContactPageQuery {
