@@ -2,16 +2,17 @@ import React from 'react';
 import 'bulma/css/bulma.min.css';
 import '../styles/global.css';
 import Footer from '../components/Footer';
+import Seo from '../components/Seo';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from '../components/Navbar';
 import { graphql } from "gatsby";
 import { faEnvelope, faPhone, faPaperPlane, faHouse } from '@fortawesome/free-solid-svg-icons'
-import companyLogo from '../../src/images/rv_trans_logo.png'
+import companyLogo from '../images/rv_trans_logo.png'
 
 const About = ({data}) => {
-    const { businessInfo, title, description } = data.site.siteMetadata;
+    const { businessInfo } = data.site.siteMetadata;
   return <div>
-      <Navbar businessInfo={businessInfo} title={title} description={description}/>
+      <Navbar businessInfo={businessInfo}/>
       <section className="section is-medium">
         <h1 className="title">About Us</h1>
         <div className="card">
@@ -31,7 +32,7 @@ const About = ({data}) => {
       <FontAwesomeIcon icon={faPaperPlane} size="lg" style={{marginRight: '1rem', color: 'rgb(0,3,116)'}}/>
       1816 Orange Blossom Loop
         Laredo, TX 78045
-        
+
     </div>
     <div className="content">
       <a href={`tel:${businessInfo.phoneNumber}`}><FontAwesomeIcon icon={faPhone} size="lg" style={{marginRight: '1rem', color: 'rgb(0,3,116)'}}/>
@@ -68,6 +69,11 @@ const About = ({data}) => {
         <Footer />
       </div>;
 };
+
+export function Head({ data }) {
+  const { title, description } = data.site.siteMetadata;
+  return <Seo title={title} description={description} />;
+}
 
 export const query = graphql`
   query AboutPageQuery {
