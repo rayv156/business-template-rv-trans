@@ -1,95 +1,51 @@
+import React from 'react';
 import { faRibbon } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import '../styles/global.css';
 
 const Footer = () => {
-  return <div>
-      <footer className="footer">
-  <div className="columns">
-      
-    <div className="column">
+  return (
+    <footer className="site-footer">
+      <div className="footer-grid">
 
-      <h4 className="bd-footer-title 
-                 has-text-weight-medium
-                 has-text-left">
-        RV Trans
-      </h4>
+        <div className="footer-col">
+          <h4>RV Trans LLC</h4>
+          <p>Family-owned freight brokerage in Laredo, TX. Integrity, reliability, and personal service since 2018.</p>
+        </div>
 
-      <p className="bd-footer-link 
-                has-text-left">
-       Established in 2018
-      </p>
-  
-    </div>
+        <div className="footer-col">
+          <h4>Explore</h4>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact Us</a>
+        </div>
 
-    <div className="column">
-      <h4 className="bd-footer-title 
-                 has-text-weight-medium 
-                 has-text-justify">
-        Explore
-      </h4>
+        <div className="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:roy@rvtrans.us">roy@rvtrans.us</a>
+          <a href="tel:956-237-2658">956-237-2658</a>
+          <a href="/contact">Send a Message</a>
+        </div>
 
-      <p className="bd-footer-link">
-         <a href="/">
-          <span className="icon-text">
-            <span>Home</span>
-          </span>
-         </a>
-          <br />
-          <a href="/about">
-              <span className="icon-text">
-                <span>About</span>
-              </span>
-            </a>
-          <br />
-          <a href="/contact">
-              <span className="icon-text">
-                <span>Contact Us</span>
-              </span>
-          </a>
-      </p>
-  
-    </div>
+        <div className="footer-col">
+          <h4>Credentials</h4>
+          <p>MC# 125298</p>
+          <p>USDOT# 3179700</p>
+          <p>DAT Credit Score: 100</p>
+        </div>
 
-    <div className="column">
-      <h4 className="bd-footer-title
-                 has-text-weight-medium
-                 has-text-justify">
-        Contact us
-      </h4>
-  
-      <p className="bd-footer-link">
-          <a href="mailto: roy@rvtrans.us">
-              <span className="icon-text">
-                <span>Email</span>
-              </span>
-            </a>
-          <br />
-          <a href="tel:956-237-2658">
-              <span className="icon-text">
-                <span>Call Us</span>
-              </span>
-            </a>
-          <br />
-          <a href="/contact">
-              <span className="icon-text">
-                <span>Message Us</span>
-              </span>
-            </a>
-      </p>
-    </div>
-    </div>
-    <div className="content has-text-centered">
-    <img alt="American Flag" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" style={{marginRight: '1rem', width: '40px'}}></img>
-    <FontAwesomeIcon icon={faRibbon} style={{fontSize: "30px" ,color: 'hotpink'}} size="lg"/>
-    </div>
-    <div className="content has-text-centered">
-    <p>
-      Created by <a href="https://rayvelasquez.netlify.app/">Ray Velasquez</a>. &#169; 2022.
-    </p>
-  </div>
-</footer>
-  </div>;
+      </div>
+
+      <div className="footer-bottom">
+        <span role="img" aria-label="American Flag" style={{fontSize: '1.1rem'}}>🇺🇸</span>
+        <FontAwesomeIcon icon={faRibbon} style={{color: 'hotpink', fontSize: '1rem'}} />
+        <span>
+          &copy; {new Date().getFullYear()} RV Trans LLC. Created by{' '}
+          <a href="https://rayvelasquez.netlify.app/" style={{color: 'rgba(255,255,255,0.6)'}}>Ray Velasquez</a>.
+        </span>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

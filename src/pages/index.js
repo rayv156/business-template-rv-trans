@@ -1,87 +1,146 @@
 import * as React from "react"
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
-config.autoAddCss = false; /* eslint-disable import/first */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTruck, faHandshake, faFileContract } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
 import Footer from '../components/Footer'
-// import chrisImage from '../../src/images/IMG_1041.png'
-import { faPeopleArrowsLeftRight, faBusinessTime, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { graphql } from "gatsby";
+import '../styles/global.css';
+import companyLogo from '../images/rv_trans_logo.png';
+import droneVideo from '../images/highway-drone.mp4';
 
-// markup
+config.autoAddCss = false;
+
 const IndexPage = ({data}) => {
   const { businessInfo, title, description } = data.site.siteMetadata;
-  return (<>
-    <main className="parallax">
-      <Navbar businessInfo={businessInfo} title={title} description={description}/>
-      <Hero businessInfo={businessInfo}/>
-      <div className="container" style={{gap: '1rem'}}>
-        {/* <div className="tile is-child box">
-          <div className="content" style={{textAlign: 'center'}}>
-          <p className="title">Honoring Breast Cancer Survivors</p>
-        <img src={chrisImage} alt="cancer survivor image" style={{width: '300px', zIndex: '3'}}/>
-        <FontAwesomeIcon icon={faRibbon} style={{fontSize: "125px" ,color: 'rgb(240, 0, 186)', position: 'absolute', margin: '0 0 0 -80px'}} size="lg"/>
+
+  return (
+    <>
+      <Navbar businessInfo={businessInfo} title={title} description={description} />
+
+      {/* Hero */}
+      <section className="hero-section">
+        <video className="hero-video" autoPlay muted loop playsInline>
+          <source src={droneVideo} type="video/mp4" />
+        </video>
+        <div className="hero-overlay" />
+        <div className="hero-content">
+          <img src={companyLogo} alt="RV Trans LLC Logo" style={{width: '220px', marginBottom: '1.5rem', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))'}} />
+          <span className="hero-title">Moving Freight,<br />Building Trust</span>
+          <span className="hero-subtitle">
+            Your reliable logistics partner in Laredo, TX — connecting shippers and carriers
+            with integrity since 2018.
+          </span>
+          <div className="hero-cta-group">
+            <a href="/contact" className="btn-primary">Get a Quote</a>
+            <a href="/about" className="btn-outline">Learn More</a>
+          </div>
         </div>
-        </div> */}
-      <div className="tile is-ancestor">
-      <div className="tile is-parent">
-    <article className="tile is-child box">
-      <div className="content">
-        <p className="title">What we offer</p>
-        <div className="subtitle">
-       
-        <h1 className="title is-size-4">
-          <FontAwesomeIcon icon={faPeopleArrowsLeftRight} size="lg" />
-          <div>Personalized services</div>
-          </h1>
-      
-      <hr></hr>
-        <h1 className="title is-size-4">
-        <FontAwesomeIcon icon={faBusinessTime} size="lg" />
-          <div>Over 35 years of experience</div>
-          </h1>
-      
-      <hr></hr>
-      
-        <h1 className="title is-size-4">
-        <FontAwesomeIcon icon={faCircleCheck} size="lg" />
-          <div>100 freight broker credit score</div>
-          </h1>
-      
+      </section>
+
+      {/* Stats Bar */}
+      <div className="stats-bar">
+        <div className="stat-item">
+          <span className="stat-number">100</span>
+          <span className="stat-label">DAT Credit Score</span>
+        </div>
+        <div className="stat-item">
+          <span className="stat-number">35+</span>
+          <span className="stat-label">Years of Experience</span>
+        </div>
+        <div className="stat-item">
+          <span className="stat-number">24/7</span>
+          <span className="stat-label">Dispatch Support</span>
+        </div>
+        <div className="stat-item">
+          <span className="stat-number">2018</span>
+          <span className="stat-label">Established</span>
         </div>
       </div>
-    </article>
-  </div>
-  <div className="tile is-vertical is-6">
-    <div className="tile">
-      <div className="tile is-parent is-vertical">
-        <article className="tile is-child box">
-        <p className="title">Testimonials</p>
-          <p>"Working with RV TRANS these past 2 years and still going has been a pleasure to work with, and the relationship that MAG INTERNATIONAL TRANSPORT LLC has proven growth to our company. RV has great customer service, great leadership, but above all they pay their freight bills on time as to why they have a 100 credit score on DAT load board, that is why moving freight for them is always welcomed.  Thank you Mr. Roy Velasquez for being a valued customer."</p>
-          <p style={{textAlign: 'right'}}>-Javier Morales Jr</p>
-          <p style={{textAlign: 'right'}}>MAG INTERNATIONAL TRANSPORT LLC</p>
-          <p style={{textAlign: 'right'}}>Terminal Manager</p>
-        </article>
-        <article className="tile is-child box">
-          <p>"For the past 3 years we have been working with RV TRANS without any incidents or issues. The Customer Service is excellent. The loads are fairly priced and always paid on time. Their dispatching hours are 24/7, always kind and approachable which in this kind of Industry is definitely a plus."</p>
-          <p style={{textAlign: 'right'}}>-Esther Oviedo</p>
-          <p style={{textAlign: 'right'}}>Imperio Transport, Inc.</p>
-        </article>
-      </div>
-     
-    </div>
-    
-  </div>
-  
-</div>
-      
-      </div>
+
+      {/* Services */}
+      <section className="site-section">
+        <span className="section-title">What We Offer</span>
+        <hr className="section-divider" />
+        <span className="section-subtitle">Full-service freight brokerage built on relationships and results.</span>
+        <div className="services-grid">
+          <div className="service-card">
+            <div className="service-icon">
+              <FontAwesomeIcon icon={faTruck} />
+            </div>
+            <h3>Transportation</h3>
+            <p>Domestic freight transport with reliable carriers, on-time pickups, and end-to-end coordination.</p>
+          </div>
+          <div className="service-card">
+            <div className="service-icon">
+              <FontAwesomeIcon icon={faFileContract} />
+            </div>
+            <h3>Import &amp; Export</h3>
+            <p>Cross-border logistics expertise connecting US and Mexico markets through our Laredo, TX gateway.</p>
+          </div>
+          <div className="service-card">
+            <div className="service-icon">
+              <FontAwesomeIcon icon={faHandshake} />
+            </div>
+            <h3>Freight Brokerage</h3>
+            <p>Matching shippers with the best carriers at competitive rates — backed by a perfect 100 credit score on DAT.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="site-section is-light">
+        <span className="section-title">What Our Partners Say</span>
+        <hr className="section-divider" />
+        <span className="section-subtitle">Trusted by carriers and shippers across the region.</span>
+        <div className="testimonials-grid">
+          <div className="testimonial-card">
+            <div className="testimonial-quote-mark">"</div>
+            <p className="testimonial-text">
+              Working with RV TRANS LLC these past 2 years has been a pleasure. RV has great customer service,
+              great leadership, but above all they pay their freight bills on time — as to why they have a
+              100 credit score on the DAT load board. Moving freight for them is always welcomed.
+            </p>
+            <div className="testimonial-author">Javier Morales Jr</div>
+            <div className="testimonial-role">Terminal Manager — MAG International Transport LLC</div>
+          </div>
+          <div className="testimonial-card">
+            <div className="testimonial-quote-mark">"</div>
+            <p className="testimonial-text">
+              For the past 3 years we have been working with RV TRANS LLC without any incidents or issues.
+              The customer service is excellent, loads are fairly priced and always paid on time.
+              Their dispatching hours are 24/7 — always kind and approachable.
+            </p>
+            <div className="testimonial-author">Esther Oviedo</div>
+            <div className="testimonial-role">Imperio Transport, Inc.</div>
+          </div>
+          <div className="testimonial-card">
+            <div className="testimonial-quote-mark">"</div>
+            <p className="testimonial-text">
+              As long as they've handled my freight deliveries, my shipments have been picked up and delivered
+              on time without any issue. I recommend you trust the company I'm now proud to call my
+              permanent logistics provider.
+            </p>
+            <div className="testimonial-author">Matt B</div>
+            <div className="testimonial-role">Customer</div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
-    </main>
     </>
-  )
+  );
+}
+
+export function Head({data}) {
+  const { title, description } = data.site.siteMetadata;
+  return (
+    <>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+    </>
+  );
 }
 
 export const query = graphql`
@@ -105,4 +164,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default IndexPage;
