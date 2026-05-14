@@ -626,7 +626,42 @@ body {
 }
 
 /* ── Responsive ── */
+
+/* Mobile navbar — override Bulma's white dropdown */
+@media (max-width: 1023px) {
+  .navbar-menu.is-active {
+    background: var(--navy);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    padding-bottom: 0.75rem;
+  }
+
+  .navbar-menu.is-active .navbar-item {
+    color: rgba(255,255,255,0.9);
+  }
+
+  .navbar-menu.is-active .navbar-item:hover {
+    background: rgba(255,255,255,0.08);
+    color: white;
+  }
+
+  .navbar-phone-btn {
+    margin: 0.5rem 1rem !important;
+    display: inline-block;
+  }
+}
+
+/* Mobile hero — fall back to static image if video can't play */
 @media (max-width: 768px) {
+  .hero-video {
+    display: none;
+  }
+
+  .hero-section {
+    background-image: url(../images/trucking-image.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
   .about-grid,
   .contact-grid { grid-template-columns: 1fr; }
 

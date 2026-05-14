@@ -9,6 +9,7 @@ import { graphql } from "gatsby";
 import '../styles/global.css';
 import companyLogo from '../images/rv_trans_logo.png';
 import droneVideo from '../images/highway-drone.mp4';
+import heroPoster from '../images/trucking-image.jpg';
 
 config.autoAddCss = false;
 
@@ -21,7 +22,7 @@ const IndexPage = ({data}) => {
 
       {/* Hero */}
       <section className="hero-section">
-        <video className="hero-video" autoPlay muted loop playsInline>
+        <video className="hero-video" autoPlay muted loop playsInline poster={heroPoster}>
           <source src={droneVideo} type="video/mp4" />
         </video>
         <div className="hero-overlay" />
