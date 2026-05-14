@@ -21,14 +21,16 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "bulma": "^0.9.4",
     "gatsby": "^5.0.0",
+    "gatsby-core-utils": "^4.16.0",
     "gatsby-plugin-mdx": "^5.0.0",
     "gatsby-source-filesystem": "^5.0.0",
     "gatsby-transformer-remark": "^6.0.0",
+    "graphql": "^16.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^3.1.0"
   },
   "devDependencies": {
-    "gatsby-plugin-netlify": "^5.0.0"
+    "gatsby-plugin-netlify": "^5.1.1"
   }
 }

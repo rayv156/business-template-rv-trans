@@ -60,13 +60,13 @@ const IndexPage = ({data}) => {
       <div className="tile is-parent is-vertical">
         <article className="tile is-child box">
         <p className="title">Testimonials</p>
-          <p>"Working with RV TRANS these past 2 years and still going has been a pleasure to work with, and the relationship that MAG INTERNATIONAL TRANSPORT LLC has proven growth to our company. RV has great customer service, great leadership, but above all they pay their freight bills on time as to why they have a 100 credit score on DAT load board, that is why moving freight for them is always welcomed.  Thank you Mr. Roy Velasquez for being a valued customer."</p>
+          <p>"Working with RV TRANS LLC these past 2 years and still going has been a pleasure to work with, and the relationship that MAG INTERNATIONAL TRANSPORT LLC has proven growth to our company. RV has great customer service, great leadership, but above all they pay their freight bills on time as to why they have a 100 credit score on DAT load board, that is why moving freight for them is always welcomed.  Thank you Mr. Roy Velasquez for being a valued customer."</p>
           <p style={{textAlign: 'right'}}>-Javier Morales Jr</p>
           <p style={{textAlign: 'right'}}>MAG INTERNATIONAL TRANSPORT LLC</p>
           <p style={{textAlign: 'right'}}>Terminal Manager</p>
         </article>
         <article className="tile is-child box">
-          <p>"For the past 3 years we have been working with RV TRANS without any incidents or issues. The Customer Service is excellent. The loads are fairly priced and always paid on time. Their dispatching hours are 24/7, always kind and approachable which in this kind of Industry is definitely a plus."</p>
+          <p>"For the past 3 years we have been working with RV TRANS LLC without any incidents or issues. The Customer Service is excellent. The loads are fairly priced and always paid on time. Their dispatching hours are 24/7, always kind and approachable which in this kind of Industry is definitely a plus."</p>
           <p style={{textAlign: 'right'}}>-Esther Oviedo</p>
           <p style={{textAlign: 'right'}}>Imperio Transport, Inc.</p>
         </article>

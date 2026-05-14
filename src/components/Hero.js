@@ -5,7 +5,7 @@ const Hero = () => {
   return <div>
       <section className="hero is-medium" >
             <div className="hero-body">
-                <img className="company-logo" src={companyLogo} alt="RV Trans Logo"/>
+                <img className="company-logo" src={companyLogo} alt="RV Trans LLC Logo"/>
             </div>
       </section>
   </div>;

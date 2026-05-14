@@ -1,6 +1,7 @@
 import { faRibbon } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import usFlag from '../images/US-United-States-Flag-icon.png';
 
 const Footer = () => {
   return <div>
@@ -12,7 +13,7 @@ const Footer = () => {
       <h4 className="bd-footer-title 
                  has-text-weight-medium
                  has-text-left">
-        RV Trans
+        RV Trans LLC
       </h4>
 
       <p className="bd-footer-link 
@@ -30,23 +31,11 @@ const Footer = () => {
       </h4>
 
       <p className="bd-footer-link">
-         <a href="/">
-          <span className="icon-text">
-            <span>Home</span>
-          </span>
-         </a>
+         <a href="/">Home</a>
           <br />
-          <a href="/about">
-              <span className="icon-text">
-                <span>About</span>
-              </span>
-            </a>
+          <a href="/about">About</a>
           <br />
-          <a href="/contact">
-              <span className="icon-text">
-                <span>Contact Us</span>
-              </span>
-          </a>
+          <a href="/contact">Contact Us</a>
       </p>
   
     </div>
@@ -59,29 +48,17 @@ const Footer = () => {
       </h4>
   
       <p className="bd-footer-link">
-          <a href="mailto: roy@rvtrans.us">
-              <span className="icon-text">
-                <span>Email</span>
-              </span>
-            </a>
+          <a href="mailto:roy@rvtrans.us">Email</a>
           <br />
-          <a href="tel:956-237-2658">
-              <span className="icon-text">
-                <span>Call Us</span>
-              </span>
-            </a>
+          <a href="tel:956-237-2658">Call Us</a>
           <br />
-          <a href="/contact">
-              <span className="icon-text">
-                <span>Message Us</span>
-              </span>
-            </a>
+          <a href="/contact">Message Us</a>
       </p>
     </div>
     </div>
-    <div className="content has-text-centered">
-    <img alt="American Flag" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" style={{marginRight: '1rem', width: '40px'}}></img>
-    <FontAwesomeIcon icon={faRibbon} style={{fontSize: "30px" ,color: 'hotpink'}} size="lg"/>
+    <div className="content" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <img alt="American Flag" src={usFlag} style={{marginRight: '1rem', width: '40px', height: 'auto'}} />
+    <FontAwesomeIcon icon={faRibbon} style={{fontSize: "30px", color: 'hotpink'}} size="lg"/>
     </div>
     <div className="content has-text-centered">
     <p>
