@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot, faClock, faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = ({data}) => {
-  const { businessInfo } = data.site.siteMetadata;
+  const { businessInfo, title, description } = data.site.siteMetadata;
   const [disabled, setDisabled] = useState(true);
   const [error, setError] = useState(false);
 
