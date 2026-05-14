@@ -116,16 +116,6 @@ const IndexPage = ({data}) => {
             <div className="testimonial-author">Esther Oviedo</div>
             <div className="testimonial-role">Imperio Transport, Inc.</div>
           </div>
-          <div className="testimonial-card">
-            <div className="testimonial-quote-mark">"</div>
-            <p className="testimonial-text">
-              As long as they've handled my freight deliveries, my shipments have been picked up and delivered
-              on time without any issue. I recommend you trust the company I'm now proud to call my
-              permanent logistics provider.
-            </p>
-            <div className="testimonial-author">Matt B</div>
-            <div className="testimonial-role">Customer</div>
-          </div>
         </div>
       </section>
 
@@ -155,11 +145,6 @@ export const query = graphql`
           phoneNumber
           businessLogo
           name
-          reviews {
-            name
-            message
-            title
-          }
         }
       }
     }
