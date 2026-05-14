@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 import { graphql } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faLocationDot, faGlobe, faIdCard, faTruck, faBuilding, faStar } from '@fortawesome/free-solid-svg-icons';
-import companyLogo from '../images/rv_trans_logo.png';
+import companyLogo from '../images/RV_TRANS_LLC_Logo_transparent.png';
 
 const About = ({data}) => {
   const { businessInfo, title, description } = data.site.siteMetadata;
@@ -66,7 +66,7 @@ const About = ({data}) => {
           {/* Right: Contact Info */}
           <div className="info-card">
             <div className="info-card-header">
-              <img className="info-card-logo" src={companyLogo} alt="RV Trans LLC Logo" />
+              <img className="info-card-logo logo-on-light" src={companyLogo} alt="RV Trans LLC Logo" />
               <h2>RV Trans LLC</h2>
             </div>
 

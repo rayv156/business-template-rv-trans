@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import companyLogo from '../images/rv_trans_logo.png';
+import companyLogo from '../images/RV_TRANS_LLC_Logo_transparent.png';
 
 function Navbar({businessInfo}) {
   const {phoneNumber} = businessInfo;
@@ -11,7 +11,7 @@ function Navbar({businessInfo}) {
     <nav className="navbar site-navbar is-dark" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="/">
-          <img className="navbar-logo" src={companyLogo} alt="RV Trans LLC Logo" />
+          <img className="navbar-logo logo-on-dark" src={companyLogo} alt="RV Trans LLC Logo" />
         </a>
         <button
           onClick={() => setIsActive(!isActive)}

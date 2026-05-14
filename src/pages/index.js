@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { graphql } from "gatsby";
 import '../styles/global.css';
-import companyLogo from '../images/rv_trans_logo.png';
+import companyLogo from '../images/RV_TRANS_LLC_Logo_transparent.png';
 import droneVideo from '../images/highway-drone.mp4';
 import heroPoster from '../images/trucking-image.jpg';
 
@@ -27,7 +27,7 @@ const IndexPage = ({data}) => {
         </video>
         <div className="hero-overlay" />
         <div className="hero-content">
-          <img src={companyLogo} alt="RV Trans LLC Logo" style={{width: '220px', marginBottom: '1.5rem', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))'}} />
+          <img src={companyLogo} alt="RV Trans LLC Logo" className="logo-on-dark" style={{width: '220px', marginBottom: '1.5rem'}} />
           <span className="hero-title">Moving Freight,<br />Building Trust</span>
           <span className="hero-subtitle">
             Your reliable logistics partner in Laredo, TX — connecting shippers and carriers
