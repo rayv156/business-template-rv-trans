@@ -143,6 +143,11 @@ export function Head({data}) {
   );
 }
 
+export function Head({ data }) {
+  const { title, description } = data.site.siteMetadata;
+  return <Seo title={title} description={description} />;
+}
+
 export const query = graphql`
   query IndexPageQuery {
     site {

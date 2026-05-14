@@ -31,17 +31,17 @@ module.exports = {
         ]
     }
   },
-  plugins: ["gatsby-plugin-netlify-cms", 
-  "gatsby-plugin-mdx", 
-  "gatsby-transformer-remark", 
-  "gatsby-plugin-recaptcha", 
-  "gatsby-plugin-netlify", 
-  "gatsby-plugin-react-helmet", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
-    },
-    __key: "pages"
-  }]
+  plugins: [
+    "gatsby-plugin-mdx",
+    "gatsby-transformer-remark",
+    "gatsby-plugin-netlify",
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "pages",
+        "path": "./src/pages/"
+      },
+      __key: "pages"
+    }
+  ]
 };
